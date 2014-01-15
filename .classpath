@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Respositories/Maven/org/apache/flume/flume-ng-sdk/1.4.0/flume-ng-sdk-1.4.0.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.apache.flume"/>
+			<attribute name="maven.artifactId" value="flume-ng-sdk"/>
+			<attribute name="maven.version" value="1.4.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/main/resources/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

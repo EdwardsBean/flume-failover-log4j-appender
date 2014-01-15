@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+  <appender name="flume" class="org.apache.flume.clients.log4jappender.FailoverLog4jAppender">
+   		<param name="Hosts" value="192.168.253.251:4142 192.168.253.251:4144"/>
+   		<param name="MaxAttempts" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[%p] %d{dd MMM hh:mm:ss aa} %t [%l] %m%n"/>
+
+    </layout>
+</appender>
+    <appender name="async" class="org.apache.log4j.AsyncAppender">
+        <param name="Blocking" value="false"/>
+        <param name="BufferSize" value="500"/>
+        <appender-ref ref="flume"/>
+    </appender>
+<root>
+    <priority value="info"></priority>
+    <appender-ref ref="async"/>
+</root>
+</log4j:configuration>
